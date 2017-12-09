@@ -1,0 +1,19 @@
+<div class="o-footer__inner">
+	<ul class="o-footer__links">
+		<?php foreach ($data->menu_links['items'] as $menu) : ?>
+			<li class="o-footer__item">
+				<a href="<?= $menu->url ?>" title="<?= $menu->title ?>"
+				   class="o-footer__link"><?= $menu->title ?></a>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+
+	<ul class="o-footer__links">
+		<?php foreach ($data->menu_links_small['items'] as $menu) : ?>
+			<li class="o-footer__item">
+				<a href="<?= $menu->url ?>" title="<?= $menu->title ?>"
+				   class="o-footer__link o-footer__link--small"><?= $menu->title ?></a>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+</div>

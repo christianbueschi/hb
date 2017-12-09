@@ -1,0 +1,28 @@
+.o-comment {
+	border-bottom: 1px solid $bright;
+	padding-bottom: $spacing * 2;
+	margin-bottom: $spacing * 2;
+	
+	&:last-child {
+		border: none;
+	}
+
+	&__author {
+		display: block;
+		margin-bottom: $spacing;
+	}
+	
+	&__date {
+		@include type-setting(-2);
+		display: block;
+		margin-bottom: $spacing;
+		
+		@include media($large-up) {
+			@include type-setting(-1);
+		}
+	}
+	
+	&__copy {
+	
+	}
+}

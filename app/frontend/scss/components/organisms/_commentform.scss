@@ -1,0 +1,39 @@
+.o-commentform {
+	background: $rose;
+	padding: $spacing * 2;
+	
+	.comment-reply-title {
+		@include type-setting(0);
+		margin-bottom: $spacing * 2;
+		color: $bright;
+		
+		@include media($medium-up) {
+			@include type-setting(1);
+		}
+	}
+	
+	.logged-in-as {
+		color: $bright;
+		margin-bottom: $spacing * 2;
+		
+		a {
+			color: $bright;
+		}
+	}
+	
+	.o-form__inner {
+		padding-bottom: 0;
+		
+		input[type="text"],
+		input[type="email"] {
+			
+			@include media($medium-up) {
+				@include span-columns(6);
+				
+				&:nth-of-type(2n) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

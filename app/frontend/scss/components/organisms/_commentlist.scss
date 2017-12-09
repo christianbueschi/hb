@@ -1,0 +1,26 @@
+.o-commentlist {
+	background: $rose;
+	padding: $spacing * 2;
+	color: $bright;
+	
+	&__title {
+		@include type-setting(0);
+		margin-bottom: $spacing * 2;
+		
+		@include media($medium-up) {
+			@include type-setting(1);
+		}
+	}
+	
+	&__inner {
+		@include media($medium) {
+			padding: 0 $spacing * 4;
+		}
+		
+		@include media($large-up) {
+			@include outer-container();
+			padding: 0 6rem;
+		}
+	}
+}
+

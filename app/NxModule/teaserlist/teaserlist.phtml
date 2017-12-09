@@ -1,0 +1,48 @@
+
+<h2 class="o-teaserlist__title">
+	<?= $data->title ?>
+</h2>
+
+<?php if($data->posts) :
+
+	$postCount = count($data->posts);
+
+	$loopCount = 1;
+
+	?>
+
+	<ul class="o-teaserlist__list">
+
+	<?php foreach($data->posts as $post) :
+
+		if($loopCount > $data->count && $data->count != -1) {
+			break;
+		}
+
+		$loopCount++
+
+		?>
+
+		<li class="o-teaserlist__item">
+
+			<?
+
+			$p['post'] = $post;
+
+			echo module('teaser')
+				->tag('article')
+				->ctrl($p); ?>
+
+		</li>
+
+
+	<?php endforeach; ?>
+
+	</ul>
+
+
+	<?php if($postCount > $data->count && $data->count != -1) : ?>
+		<a href="<?= $data->buttonLink ?>" class="o-teaserlist__btn a-btn"><?= $data->buttonText ?></a>
+	<?php endif; ?>
+
+<?php endif; ?>

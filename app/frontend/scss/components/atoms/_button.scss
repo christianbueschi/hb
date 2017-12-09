@@ -1,0 +1,31 @@
+.a-btn {
+	display: inline-block;
+	@include type-setting(-1);
+	background-color: $dark;
+	color: $bright;
+	text-align: center;
+	height: 48px;
+	padding: $spacing;
+	border-radius: 8px;
+	border: none;
+	font-family: $font-family;
+	width: 100%;
+	margin-bottom: $spacing;
+	-webkit-appearance: none;
+	text-decoration: none;
+	
+	transition: color .25s ease-in-out;
+	
+	@include media($large-up) {
+		max-width: 250px;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+	
+	&:hover {
+		cursor: pointer;
+		color: $rose;
+	}
+}

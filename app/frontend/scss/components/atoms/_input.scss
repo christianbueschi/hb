@@ -1,0 +1,54 @@
+.a-input {
+	
+	font-family: $font-family;
+	@include type-setting(-2);
+	background-color: white;
+	color: $grey-80;
+	border-radius: 5px;
+	padding: 0 $spacing;
+	border: 1px solid $grey-20;
+	width: 100%;
+	
+	-webkit-appearance: none;
+	
+	line-height: 42px;
+	height: 42px;
+	
+	@include media($medium-up) {
+		line-height: 48px;
+		height: 48px;
+	}
+	
+	&:focus {
+		outline: none;
+		border-color: $sc-blue;
+	}
+	
+	&--hidden {
+		display: none;
+	}
+	
+	// Overwrite Ninja Form Styles
+	
+	&[type="email"] {
+		
+		.mc4wp-form & {
+			max-width: calc(100% - #{$spacing} - 130px);
+			width: calc(100% - #{$spacing} - 130px);
+			margin-right: $spacing;
+			
+			@include media($medium-up) {
+				max-width: calc(100% - #{$spacing} - 165px);
+				width: calc(100% - #{$spacing} - 165px);
+			}
+			
+			.o-footer & {
+				@include media($medium-up) {
+					max-width: 400px;
+				}
+			}
+		}
+		
+	}
+	
+}

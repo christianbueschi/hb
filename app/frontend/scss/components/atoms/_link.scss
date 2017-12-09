@@ -1,0 +1,10 @@
+.a-link {
+	text-decoration: none;
+	color: white;
+	
+	transition: color .25s ease-in-out;
+	
+	&:hover {
+		color: $rose;
+	}
+}

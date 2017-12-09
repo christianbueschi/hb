@@ -1,0 +1,183 @@
+.o-form {
+	background-color: $rose;
+	padding: $spacing * 2;
+	
+	&__inner {
+		
+		@include media($medium-up) {
+			padding: $spacing * 4;
+		}
+		
+		@include media($large-up) {
+			@include outer-container();
+			padding: $spacing * 4 6rem;
+		}
+	}
+	
+	&__text {
+		color: $bright;
+		text-align: center;
+		margin-bottom: $spacing * 2;
+		
+		@include media($large-up) {
+			margin-bottom: $spacing * 4;
+		}
+	}
+	
+	&__inner {
+		
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			background-color: $bright;
+			padding: $spacing;
+			border-radius: 8px;
+			border: none;
+			-webkit-appearance: none;
+			@include type-setting(-1);
+			font-family: $font-family;
+			width: 100%;
+			margin-bottom: $spacing;
+			
+			&:focus {
+				outline: none;
+			}
+		}
+		
+		input[type="text"],
+		input[type="email"] {
+			height: 48px;
+		}
+		
+		textarea {
+			display: block;
+		}
+		
+		
+		.wpcf7-checkbox {
+			display: block;
+			margin-bottom: $spacing * 2;
+			
+			> span {
+				margin-left: $spacing;
+				position: relative;
+			}
+		}
+		
+		input[type="checkbox"] {
+			
+			@include media($large-up) {
+				position: relative;
+				top: -10px;
+			}
+		
+			+ span {
+				padding-left: $spacing * 2;
+				color: $bright;
+				
+				&:before {
+					content: '';
+					display: inline-block;
+					position: absolute;
+					left: 0;
+					top: 2px;
+					border: 2px solid $bright;
+					background-color: $rose;
+					height: 25px;
+					width: 25px;
+					
+					@include media($large-up) {
+						top: 7px;
+					}
+				}
+			}
+			
+			&:checked {
+				
+				+ span {
+					
+					&:after {
+						content: "\f3fd";
+						font-family: $icon-font-family;
+						position: absolute;
+						left: 4px;
+						font-size: 40px;
+					}
+				}
+			}
+		}
+		
+		input[type="submit"] {
+			@extend .a-btn;
+		}
+	}
+	
+	&__download__link {
+		display: none;
+		
+		.sent & {
+			display: block;
+			
+			@include media($large-up) {
+				float: left;
+			}
+		}
+	}
+	
+	.wpcf7-mail-sent-ok {
+		border: none;
+		margin: 0;
+		padding: 0;
+		color: $bright;
+		text-align: center;
+		
+		@include media($large-up) {
+			text-align: left;
+			float: left;
+			width: 60%;
+		}
+	}
+	
+	.sent {
+		
+		.o-form__text,
+		.wpcf7-form-control-wrap,
+		input[type="submit"].wpcf7-submit {
+			display: none;
+		}
+	}
+	
+	
+	.ajax-loader {
+		display: none !important;
+	}
+	
+	@include media($medium-down) {
+		
+		input[type="submit"].wpcf7-submit {
+			position: relative;
+			top: 50px;
+		}
+		
+		.opt-in {
+			position: relative;
+			top: -52px;
+		}
+	}
+	
+	@include media($large-up) {
+		
+		.wpcf7-form-control-wrap {
+			@include span-columns(5);
+		}
+		
+		input[type="submit"].wpcf7-submit {
+			@include span-columns(2);
+			margin-right: 0;
+		}
+		
+		.opt-in {
+			@include span-columns(5);
+		}
+	}
+}

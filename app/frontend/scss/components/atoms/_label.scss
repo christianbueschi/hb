@@ -1,0 +1,5 @@
+.a-label {
+	font-family: $font-family;
+	@include type-setting(-2);
+	font-weight: normal !important;
+}

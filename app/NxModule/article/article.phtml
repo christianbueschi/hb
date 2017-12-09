@@ -1,0 +1,19 @@
+<div class="o-article__inner">
+	<?php if ($data->image) : ?>
+		<figure class="o-article__image">
+			<?= $data->image ?>
+		</figure>
+	<?php endif; ?>
+
+	<h1 class="o-article__title">
+		<?= $data->title ?>
+	</h1>
+
+	<div class="o-article__date">
+		<?= $data->date ?>
+	</div>
+
+	<div class="o-article__copy">
+		<?= $data->content ?>
+	</div>
+</div>

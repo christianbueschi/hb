@@ -1,0 +1,55 @@
+.o-teaser {
+	
+	&__figure {
+		
+		img {
+			height: 100%;
+		}
+	}
+	
+	&__text {
+		padding: $spacing * 2;
+	}
+	
+	&__date {
+		font-family: $font-family-serif;
+		margin-bottom: $spacing * 2;
+		
+		@include media($large-up) {
+			@include type-setting(-1);
+		}
+	}
+	
+	&__title {
+		@include type-setting(0);
+		margin-bottom: $spacing * 2;
+	}
+	
+	&__excerpt {
+		margin-bottom: $spacing * 2;
+		
+		@include media($large-up) {
+			@include type-setting(-1);
+		}
+	}
+	
+	&__link {
+		@extend .a-link;
+		color: $dark;
+		
+		@include media($large-up) {
+			@include type-setting(-1);
+		}
+		
+		
+		&:after {
+			content: "\f3d6";
+			font-family: $icon-font-family;
+			font-size: 35px;
+			position: relative;
+			left: 10px;
+			top: 7px;
+		}
+	
+	}
+}

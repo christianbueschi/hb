@@ -1,0 +1,25 @@
+<?php if (have_rows('stage_stages')): ?>
+
+	<div class="siema">
+
+		<?php while (have_rows('stage_stages')): the_row(); ?>
+
+			<?php $image = get_sub_field('stage_image') ?>
+
+			<div class="o-stage__inner" style="background-image: url(<?= $image['url'] ?>);">
+				<h1 class="o-stage__title">
+					<?= get_sub_field('stage_title')?>
+					<button class="o-stage__btn o-stage__btn--down icon-ios-arrow-thin-right js-down"></button>
+				</h1>
+			</div>
+
+		<? endwhile; ?>
+
+	</div>
+
+	<button class="o-stage__btn o-stage__btn--prev icon-ios-arrow-left js-prev"></button>
+	<button class="o-stage__btn o-stage__btn--next icon-ios-arrow-right js-next"></button>
+
+
+<? endif; ?>
+

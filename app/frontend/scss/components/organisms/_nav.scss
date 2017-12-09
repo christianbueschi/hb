@@ -1,0 +1,28 @@
+.o-nav {
+	display: flex;
+	
+	&__list {
+		margin: 0 auto;
+	}
+	
+	&__item {
+		float: left;
+		padding-right: $spacing * 2;
+	}
+	
+	&__link {
+		@include type-setting(-1);
+		@extend .a-link;
+		display: block;
+		padding: $spacing 0;
+		
+		&:hover {
+			
+			.blog &,
+			.single & {
+				color: $dark;
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,22 @@
+.o-header {
+	
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	top: 0;
+	height: $header-height-s;
+	background-color: rgba(0,0,0,0);
+	
+	transition: background-color .25s ease-in-out;
+	
+	.header-background & {
+		background-color: rgba(28,45,54,.6);
+	}
+	
+	.blog &,
+	.single &,
+	.page-template-default & {
+		background-color: rgba(240,180,169,.6);
+	}
+	
+}

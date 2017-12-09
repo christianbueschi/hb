@@ -1,0 +1,71 @@
+.o-teaserlist {
+	background-color: $blue;
+	padding: $spacing * 2;
+	
+	@include media($medium-up) {
+		padding: $spacing * 4;
+	}
+	
+	.blog & {
+		padding-top: $header-height-s;
+		
+		@include media($medium-up) {
+			padding-top: calc( #{$header-height-s} + #{$spacing});
+		}
+		
+		@include media($large-up) {
+			padding-top: $header-height-s * 2;
+		}
+	}
+	
+	&__title {
+		@include type-setting(0);
+		margin-bottom: $spacing * 2;
+		
+		@include media($medium-up) {
+			@include type-setting(1);
+			@include outer-container();
+			margin-bottom: $spacing * 4;
+		}
+	}
+	
+	&__list {
+		
+		@include media($medium-up) {
+			@include row();
+		}
+		
+		@include media($large-up) {
+			@include outer-container();
+		}
+	
+	}
+	
+	&__item {
+		background-color: $bright;
+		margin-bottom: $spacing;
+		
+		@include media($medium) {
+			margin-bottom: $spacing * 2;
+			//@include span-columns(6);
+			
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+		
+		@include media($large-up) {
+			margin-bottom: $spacing * 2;
+			@include span-columns(4);
+			
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	&__btn {
+		display: block;
+		margin: 0 auto;
+	}
+}

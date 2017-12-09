@@ -1,0 +1,38 @@
+.o-footer {
+	background-color: $dark;
+	padding: $spacing * 2;
+	
+	&__inner {
+		@include outer-container();
+	}
+	
+	&__links {
+		text-align: center;
+		margin-bottom: $spacing;
+		
+		@include media($medium-up) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	
+	&__item {
+		
+		
+		@include media($medium-up) {
+			margin-right: $spacing * 4;
+		}
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	&__link {
+		@extend .a-link;
+		
+		&--small {
+			@include type-setting(-2);
+		}
+	}
+}

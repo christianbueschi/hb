@@ -1,0 +1,14 @@
+<div class="o-commentlist__inner">
+
+	<h2 class="o-commentlist__title">
+		<? printf(_n('%1$s Kommentar', '%1$s Kommentare', get_comments_number(), 'nxtheme'), number_format_i18n(get_comments_number()));
+		?>
+	</h2>
+
+	<ul>
+		<?
+		// Use the following syntax instead of passing args using an array() in order to keep all the other
+		// comment settings that are set in the WordPress admin i.e. comment order
+		wp_list_comments('type=comment&callback=\NxTheme\Helpers::nx_comment_callback', $data->comments) ?>
+	</ul>
+</div>
