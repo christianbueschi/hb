@@ -7,4 +7,14 @@
 	&:hover {
 		color: $rose;
 	}
+	
+	&--copy {
+		color: $dark;
+		border-bottom: 1px solid $dark;
+		
+		&:hover {
+			color: $rose;
+			border-color: $rose;
+		}
+	}
 }

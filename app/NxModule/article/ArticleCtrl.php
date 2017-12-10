@@ -39,7 +39,7 @@ class ArticleCtrl {
 		$viewData['title'] = get_the_title();
 		$viewData['date'] = get_the_date('j F Y', $id);
 		$viewData['image'] = get_the_post_thumbnail($id);
-		$viewData['content'] = get_the_content();
+		$viewData['content'] = apply_filters( 'the_content', get_the_content() );
 
 		return $viewData;
 	}

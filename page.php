@@ -1,6 +1,7 @@
 <?
+
 /**
- * Template name: Landing Page
+ * The Template for displaying all pages.
  *
  * @package nxtheme
  */
@@ -34,7 +35,7 @@ get_header();
 				module('form')
 					->tag('section')
 					->ctrl()
-					->attrib('id', 'start'); ?>
+					->attrib('id', 'ebook'); ?>
 
 
 			<?php endif; ?>

@@ -45,6 +45,13 @@
 		background-color: $bright;
 		margin-bottom: $spacing;
 		
+		transform: scale(1);
+		transition: $transition;
+		
+		&:hover {
+			transform: scale(1.02);
+		}
+		
 		@include media($medium) {
 			margin-bottom: $spacing * 2;
 			//@include span-columns(6);

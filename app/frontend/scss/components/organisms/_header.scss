@@ -10,12 +10,13 @@
 	transition: background-color .25s ease-in-out;
 	
 	.header-background & {
-		background-color: rgba(28,45,54,.6);
+		//background-color: rgba(28,45,54,.6);
+		background-color: rgba(240,180,169,.6);
 	}
 	
 	.blog &,
 	.single &,
-	.page-template-default & {
+	.page-template-default:not(.home) & {
 		background-color: rgba(240,180,169,.6);
 	}
 	

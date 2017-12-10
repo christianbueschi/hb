@@ -7,10 +7,12 @@
 			<?php $image = get_sub_field('stage_image') ?>
 
 			<div class="o-stage__inner" style="background-image: url(<?= $image['url'] ?>);">
-				<h1 class="o-stage__title">
-					<?= get_sub_field('stage_title')?>
-					<button class="o-stage__btn o-stage__btn--down icon-ios-arrow-thin-right js-down"></button>
-				</h1>
+				<a class="o-stage__link js-down">
+					<h1 class="o-stage__title">
+						<?= get_sub_field('stage_title')?>
+						<i class="o-stage__btn o-stage__btn--down icon-ios-arrow-thin-right"></i>
+					</h1>
+				</a>
 			</div>
 
 		<? endwhile; ?>

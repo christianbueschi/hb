@@ -45,9 +45,10 @@
                 siema.next();
             });
 
-            $('.js-down').on('click', function() {
-                var aTag = $('#start');
-                $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+            $('.js-down').on('click', function(ev) {
+                ev.preventDefault();
+                var aTag = $('#ebook');
+                $('html,body').animate({scrollTop: aTag.offset().top - 55},'slow');
             });
 
 

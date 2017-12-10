@@ -54,12 +54,24 @@
 	
 	&__copy {
 		
+		@include media($large-up) {
+			@include outer-container(800px);
+		}
+		
 		p {
 			margin-bottom: $spacing;
 			
 			@include media($large-up) {
 				margin-bottom: $spacing * 2;
 			}
+		}
+		
+		a {
+			@extend .a-link--copy;
+		}
+		
+		strong {
+			font-weight: bold;
 		}
 		
 	}

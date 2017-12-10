@@ -46,7 +46,7 @@
 	&__copy {
 		
 		@include media($large-up) {
-			@include outer-container(700px);
+			@include outer-container(800px);
 		}
 		
 		.m--rose & {

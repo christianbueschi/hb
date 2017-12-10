@@ -21,6 +21,21 @@
 		}
 	}
 	
+	&__link {
+		
+		&:hover {
+			cursor: pointer;
+			
+			h1 {
+				color: $blue;
+			}
+			
+			i {
+				right: -10px;
+			}
+		}
+	}
+	
 	&__title {
 		@include type-setting(0);
 		font-family: $font-family-serif;
@@ -30,6 +45,8 @@
 		bottom: $spacing * 2;
 		left: $spacing * 2;
 		right: $spacing * 2;
+		
+		transition: $transition;
 		
 		@include media($medium) {
 			@include type-setting(1);
@@ -57,6 +74,7 @@
 		border: none;
 		-webkit-appearance: none;
 		
+		
 		&--prev {
 			left: $spacing;
 		}
@@ -71,6 +89,9 @@
 			position: relative;
 			top: 10px;
 			height: auto;
+			right: 0;
+			
+			transition: $transition;
 			
 			@include media($medium) {
 				font-size: 70px;
@@ -79,6 +100,10 @@
 			@include media($large-up) {
 				font-size: 90px;
 			}
+		}
+		
+		&:hover {
+			cursor: pointer;
 		}
 		
 		&:focus {

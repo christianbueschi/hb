@@ -1,5 +1,19 @@
 .o-teaser {
 	
+	&__link {
+		display: block;
+		
+		&:hover {
+			
+			.o-teaser__more {
+				
+				&:after {
+					left: 20px;
+				}
+			}
+		}
+	}
+	
 	&__figure {
 		
 		img {
@@ -33,14 +47,13 @@
 		}
 	}
 	
-	&__link {
+	&__more {
 		@extend .a-link;
 		color: $dark;
 		
 		@include media($large-up) {
 			@include type-setting(-1);
 		}
-		
 		
 		&:after {
 			content: "\f3d6";
@@ -49,6 +62,8 @@
 			position: relative;
 			left: 10px;
 			top: 7px;
+			
+			transition: $transition;
 		}
 	
 	}

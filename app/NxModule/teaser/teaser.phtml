@@ -1,19 +1,22 @@
-<figure class="o-teaser__figure">
-	<?= $data->image ?>
-</figure>
+<a href="<?= $data->link ?>" class="o-teaser__link">
 
-<div class="o-teaser__text">
-	<div class="o-teaser__date">
-		<?= $data->date ?>
+	<figure class="o-teaser__figure">
+		<?= $data->image ?>
+	</figure>
+
+	<div class="o-teaser__text">
+		<div class="o-teaser__date">
+			<?= $data->date ?>
+		</div>
+
+		<h4 class="o-teaser__title">
+			<?= $data->title ?>
+		</h4>
+
+		<p class="o-teaser__excerpt">
+			<?= $data->content ?>
+		</p>
+
+		<div class="o-teaser__more">Lese weiter</div>
 	</div>
-
-	<h4 class="o-teaser__title">
-		<?= $data->title ?>
-	</h4>
-
-	<p class="o-teaser__excerpt">
-		<?= $data->content ?>
-	</p>
-
-	<a class="o-teaser__link" href="<?= $data->link?>">Lese weiter</a>
-</div>
+</a>
